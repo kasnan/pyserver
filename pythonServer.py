@@ -15,8 +15,9 @@ soc.bind((host, port))
 soc.listen(5)
 soc.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-
+#path for laptop device
 path = "C:/Users/kasna/Documents/vsworkspace/Pyworkspace/pyserver/trailers/"
+#path for desktop device
 #path = "C:/Users/kasna/Documents/workspace/py/pyserver/trailers/"
 
 
@@ -80,7 +81,7 @@ def downFromUrl(file_name):
     yt.streams.filter(progressive=True, file_extension="mp4")\
     .order_by("resolution")\
     .desc()\
-    .first()\
+    .last()\
     .download(path)
 
     for filename in os.listdir(path):
