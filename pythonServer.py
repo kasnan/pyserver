@@ -106,8 +106,8 @@ def getMovie(file_name, conn):
 
         print("전송완료 %s, 전송량 %d" %(filename, data_transferred))
 
-    if pt.exists(path+file_name+".mp4"):
-        os.remove(path+file_name+".mp4")
+    # if pt.exists(path+file_name+".mp4"):
+    #     os.remove(path+file_name+".mp4")
 
 while True:
     conn, addr = soc.accept()
